@@ -5,6 +5,25 @@ This guide will help you move your Mea Muziq Productions website from Replit to 
 
 ---
 
+## CRITICAL FIRST STEP: Fix the Build Command
+
+Before downloading or uploading to GitHub, you MUST edit `package.json`:
+
+1. Open `package.json` in Replit (click on it in the file list)
+2. Find this line (around line 8):
+   ```
+   "build": "script/build.tsc",
+   ```
+3. Change it to:
+   ```
+   "build": "node script/build.mjs",
+   ```
+4. Save the file
+
+**This change is required for Hostinger to build your website!**
+
+---
+
 ## STEP 1: Download Your Website from Replit
 
 1. In Replit, look at the left side where you see all your files

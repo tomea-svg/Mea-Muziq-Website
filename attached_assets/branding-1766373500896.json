@@ -1,0 +1,54 @@
+{
+  "colorScheme": "light",
+  "fonts": [
+    {
+      "family": "Times New Roman",
+      "count": 3
+    }
+  ],
+  "colors": {
+    "primary": "#000000",
+    "accent": "#004182",
+    "background": "#FFFFFF",
+    "textPrimary": "#004182",
+    "link": "#004182"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Times New Roman",
+      "heading": "Times New Roman"
+    },
+    "fontStacks": {
+      "body": [
+        "Times New Roman"
+      ],
+      "heading": [
+        "Times New Roman"
+      ],
+      "paragraph": [
+        "Times New Roman"
+      ]
+    },
+    "fontSizes": {
+      "h1": "16px",
+      "h2": "16px",
+      "body": "16px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "8px"
+  },
+  "components": {},
+  "images": {
+    "logo": null,
+    "favicon": "https://47490907-1f79-42db-ac0d-ee18e694c4a8-00-3vjvapbhlp0g9.riker.replit.dev/favicon.png",
+    "ogImage": null
+  },
+  "__framework_hints": [],
+  "confidence": {
+    "buttons": 0,
+    "colors": 0,
+    "overall": 0
+  }
+}

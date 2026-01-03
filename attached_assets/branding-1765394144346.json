@@ -1,0 +1,96 @@
+{
+  "colorScheme": "dark",
+  "fonts": [
+    {
+      "family": "Inter",
+      "role": "body"
+    },
+    {
+      "family": "Kepler Std Display",
+      "role": "display"
+    }
+  ],
+  "colors": {
+    "primary": "#ACA684",
+    "accent": "#2E2912",
+    "background": "#000000",
+    "textPrimary": "#2E2912",
+    "link": "#2E2912"
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "Inter",
+      "heading": "Kepler Std Display"
+    },
+    "fontStacks": {
+      "heading": [
+        "sans-serif"
+      ],
+      "body": [
+        "sans-serif"
+      ],
+      "paragraph": [
+        "Inter"
+      ]
+    },
+    "fontSizes": {
+      "h1": "16px",
+      "h2": "70.4px",
+      "body": "17.6px"
+    }
+  },
+  "spacing": {
+    "baseUnit": 4,
+    "borderRadius": "0px"
+  },
+  "components": {
+    "input": {
+      "borderColor": "#CCCCCC",
+      "borderRadius": "0px"
+    },
+    "buttonPrimary": {
+      "background": "#ACA684",
+      "textColor": "#FFFFFF",
+      "borderRadius": "300px",
+      "shadow": "none"
+    }
+  },
+  "images": {
+    "logo": "File saved at: attached_assets/logo.webp",
+    "favicon": "File saved at: attached_assets/favicon.webp",
+    "ogImage": "http://static1.squarespace.com/static/6337bdda2f91043af111d73d/t/67f19f999a2c5f79a1adefd0/1743888281465/SonicSomm+Black+Logo+%281%29.png?format=1500w"
+  },
+  "__framework_hints": [],
+  "__llm_logo_reasoning": {
+    "selectedIndex": 0,
+    "reasoning": "Logo #0 matches the brand name 'Sonic Sommelier®', is visible in the header, and links to the homepage, making it the best candidate for the brand logo.",
+    "confidence": 0.95
+  },
+  "__llm_button_reasoning": {
+    "primary": {
+      "index": 0,
+      "text": "Reserve a curation consultation",
+      "reasoning": "Button #0 has vibrant background color #ACA684 (red/orange) and action-oriented text 'Reserve a curation consultation', making it the primary CTA."
+    },
+    "secondary": {
+      "index": -1,
+      "text": "N/A",
+      "reasoning": "Button #1 also has the same background color as Button #0, and Button #2 is not a CTA button. Therefore, no valid secondary button exists."
+    },
+    "confidence": 0.9
+  },
+  "personality": {
+    "tone": "modern",
+    "energy": "medium",
+    "targetAudience": "wine enthusiasts and professionals"
+  },
+  "designSystem": {
+    "framework": "custom",
+    "componentLibrary": null
+  },
+  "confidence": {
+    "buttons": 0.9,
+    "colors": 0.95,
+    "overall": 0.925
+  }
+}
