@@ -1,6 +1,12 @@
 import { build as esbuild } from "esbuild";
 import { build as viteBuild } from "vite";
 import { rm, readFile } from "fs/promises";
+import path from "path";
+import { fileURLToPath } from "url";
+import react from "@vitejs/plugin-react";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const rootDir = path.resolve(__dirname, "..");
 
 const allowlist = [
   "@google/generative-ai",
@@ -34,7 +40,21 @@ async function buildAll() {
   await rm("dist", { recursive: true, force: true });
 
   console.log("building client...");
-  await viteBuild();
+  await viteBuild({
+    root: path.resolve(rootDir, "client"),
+    plugins: [react()],
+    resolve: {
+      alias: {
+        "@": path.resolve(rootDir, "client", "src"),
+        "@shared": path.resolve(rootDir, "shared"),
+        "@assets": path.resolve(rootDir, "attached_assets"),
+      },
+    },
+    build: {
+      outDir: path.resolve(rootDir, "dist/public"),
+      emptyOutDir: true,
+    },
+  });
 
   console.log("building server...");
   const pkg = JSON.parse(await readFile("package.json", "utf-8"));
