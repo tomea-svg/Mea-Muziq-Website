@@ -40,12 +40,14 @@ async function buildAll() {
   await rm("dist", { recursive: true, force: true });
 
   console.log("building client...");
+  const clientRoot = path.resolve(rootDir, "client");
   await viteBuild({
-    root: path.resolve(rootDir, "client"),
+    configFile: false,
+    root: clientRoot,
     plugins: [react()],
     resolve: {
       alias: {
-        "@": path.resolve(rootDir, "client", "src"),
+        "@": path.resolve(clientRoot, "src"),
         "@shared": path.resolve(rootDir, "shared"),
         "@assets": path.resolve(rootDir, "attached_assets"),
       },
@@ -53,6 +55,9 @@ async function buildAll() {
     build: {
       outDir: path.resolve(rootDir, "dist/public"),
       emptyOutDir: true,
+      rollupOptions: {
+        input: path.resolve(clientRoot, "index.html"),
+      },
     },
   });
 
