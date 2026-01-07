@@ -41,6 +41,8 @@ async function buildAll() {
 
   console.log("building client...");
   const clientRoot = path.resolve(rootDir, "client");
+  const mainEntry = path.resolve(clientRoot, "src/main.tsx");
+  
   await viteBuild({
     configFile: false,
     root: clientRoot,
@@ -50,6 +52,8 @@ async function buildAll() {
         "@": path.resolve(clientRoot, "src"),
         "@shared": path.resolve(rootDir, "shared"),
         "@assets": path.resolve(rootDir, "attached_assets"),
+        "/src/main.tsx": mainEntry,
+        "./src/main.tsx": mainEntry,
       },
     },
     build: {
